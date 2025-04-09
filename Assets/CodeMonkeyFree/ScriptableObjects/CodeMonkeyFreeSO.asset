@@ -14,39 +14,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1743045182
+  lastShownTimestamp: 1744178481
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1743045182
+  checkedLastUpdateTimestamp: 1744178481
   lastQOTDResponse:
-    questionId: 164
-    questionText: What is the correct way to show a variable in the Editor?
-    answerA: public int health;
-    answerB: public static int health;
-    answerC: '[SerializeField] private int health;'
-    answerD: private int health;
+    questionId: 168
+    questionText: 'What are the minimum requirements (array size) to draw a Mesh
+      Quad?
+
+      <p>Mesh mesh = new Mesh();</p>
+
+      <p>mesh.vertices = ???</p>
+
+      <p>mesh.uv
+      = ???</p>
+
+      <p>mesh.triangles = ???</p>'
+    answerA: 4 vertices, 4 uvs, 2 triangles
+    answerB: 4 vertices, 4 uvs, 6 triangles
+    answerC: 6 vertices, 3 uvs, 4 triangles
+    answerD: 
     answerE: 
-  lastQotdTimestamp: 1743045182
+  lastQotdTimestamp: 1744178481
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleBundleSyntyMar25EndSoon.png
-    topText: Make ANY game with these awesome Assets! (97% OFF ENDS SOON!)
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleBundleEnvironmentsApr25.png
+    topText: Gorgeous Realistic and Stylized Environments at 99% OFF!
     topLink: humblebundle
     bottomText: Learn Unity DOTS for MASSIVE Performance Boosts! (and make an RTS)
     bottomLink: dotscourse
-  lastDynamicHeaderTimestamp: 1743045182
+  lastDynamicHeaderTimestamp: 1744178481
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1743045182
+  websiteLatestMessageTimestamp: 1744178481
   websiteLatestVideos:
     videos:
-    - youTubeId: 2-B1HH0rWRI
-      title: EVERYTHING Steam did in 2024! (Devs NEED to Know)
-    - youTubeId: QYrKiHq7Vaw
-      title: TOP 10 NEW Systems and Tools MARCH 2025! | Unity Asset Store
-    - youTubeId: ZIg7VoD9ptI
-      title: The FUTURE of Unity in 2025 and BEYOND!
-    - youTubeId: W_XOZAWJF24
-      title: I made the MOST PROFITABLE Game as a Test!
-  websiteLatestVideosTimestamp: 1743045182
+    - youTubeId: zgJHRiounHs
+      title: The Problem of Making more MONEY with Assets than Games
+    - youTubeId: wejUWjCVW94
+      title: The 10 BEST Game Dev Beginner Projects to Make!
+    - youTubeId: 79an2JDe51g
+      title: NO MORE PROGRAMMING, let's do Pen Spinning instead!
+    - youTubeId: BR1HFAj2v-Y
+      title: This GAME made $28 MILLION! Why?
+  websiteLatestVideosTimestamp: 1744178481
