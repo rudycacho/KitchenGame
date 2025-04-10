@@ -1,8 +1,19 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 
-public class CuttingCounter : BaseCounter, IHasProgress
-{
+public class CuttingCounter : BaseCounter, IHasProgress {
+    public static event EventHandler OnAnyCut;
+    private CinemachineImpulseSource impulseSource;
+
+    new public static void ResetStaticData() {
+        OnAnyCut = null;
+    }
+
+    private void Awake() {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+    
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
     public event EventHandler OnCut;
     
@@ -23,6 +34,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {
                         progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
                     });
+                    
                 }
             }
             else {
@@ -54,8 +66,11 @@ public class CuttingCounter : BaseCounter, IHasProgress
         if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO())) {
             // There is a kitchen object on this counter
             cuttingProgress++;
+            impulseSource.GenerateImpulse();
             
             OnCut?.Invoke(this, EventArgs.Empty);
+            OnAnyCut?.Invoke(this, EventArgs.Empty);
+            
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
             
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {
